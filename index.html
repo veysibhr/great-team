@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générer des équipes équilibrées</title>
+    <!-- Lien vers le fichier CSS dans static/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/png">
+</head>
+<body>
+    <h1>Génère tes équipes de manière aléatoire et équitable !</h1>
+    <p class="subtitle">La note doit être calculée en fonction de l'effectif</p>
+
+
+    <!-- Section d'ajout des joueurs -->
+    <div id="player-section">
+        <div class="player-row">
+            <input type="text" placeholder="Nom du joueur" class="player-name">
+            <input type="number" min="1" max="10" placeholder="Note" class="player-note">
+            <select class="player-poste">
+                <option value="defenseur">Défenseur</option>
+                <option value="milieu">Milieu</option>
+                <option value="attaquant">Attaquant</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Bouton pour ajouter un joueur -->
+    <button id="add-player">Ajouter un joueur</button>
+
+    <!-- Bouton pour générer les équipes -->
+    <button id="generate-teams">Générer les équipes</button>
+
+    <!-- Section de résultats -->
+    <div id="result-section" style="display: none;">
+        <div class="result-section">
+            <div class="team-result" id="team1-result">
+                <h3>Équipe 1</h3>
+                <!-- Les résultats de l'équipe 1 seront injectés ici -->
+                <h4>Note totale : <span id="team1-score"></span></h4>
+            </div>
+            <div class="vs">
+              <img src="{{ url_for('static', filename='versus.png') }}" alt="VS" class="vs-image">
+            </div>
+            <div class="team-result" id="team2-result">
+                <h3>Équipe 2</h3>
+                <!-- Les résultats de l'équipe 2 seront injectés ici -->
+                <h4>Note totale : <span id="team2-score"></span></h4>
+            </div>
+        </div>
+    </div>
+    <div class="signature">
+      By Veysi
+    </div>
+    <!-- Lien vers le fichier JS dans static/ -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 100px;
+    font-weight: bold;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+.player-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    width: 30%;
+    margin: 0 10px;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation de transition douce pour la couleur */
+}
+button:hover {
+    background-color: #f1823c; /* Couleur lorsque le bouton est survolé */
+}
+
+.result-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.team-result {
+    text-align: center; /* Centrer le texte horizontalement */
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement */
+}
+.team-result h3, .team-result h4 {
+    margin: 10px 0; /* Ajouter de l'espace autour des titres */
+    text-align: center;
+}
+.team-result .players-box {
+    border: 2px solid black; /* Bordure noire de 2px */
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%; /* S'assure que la boîte prend toute la largeur disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement les joueurs */
+    justify-content: center; /* Centrer verticalement les joueurs */
+    min-height: 100px; /* Hauteur minimale pour garantir un cadre visible
+}
+.players-box p {
+    margin: 5px 0; /* Espacement entre les noms des joueurs */
+}
+
+.vs {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    align-self: center;
+}
+.vs-image {
+    width: 185px;  /* Ajuste la largeur selon tes besoins */
+    height: auto;  /* Garde le ratio de l'image */
+    margin: 0 20px;  /* Ajoute de l'espace autour de l'image */
+}
+.subtitle {
+    font-size: 0.8rem;  /* Taille plus petite */
+    color: gray;        /* Couleur gris clair (tu peux changer si tu veux) */
+    font-style: italic; /* Italique pour le texte */
+    margin-top: -10px;  /* Ajustement de l'espacement au-dessus */
+}
+.signature {
+    position: fixed; /* Fixe le texte en bas à gauche */
+    bottom: 10px; /* Position à 10px du bas */
+    left: 10px; /* Position à 10px du bord gauche */
+    font-size: 0.8rem; /* Taille de texte plus petite */
+    color: gray; /* Couleur grise pour une signature discrète */
+    font-style: italic; /* Italique pour un effet de signature */
+}
