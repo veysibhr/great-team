@@ -1,5 +1,5 @@
 document.getElementById('add-player').addEventListener('click', function() {
-    // Ajouter dynamiquement un nouveau joueur
+    
     const playerSection = document.getElementById('player-section');
     const newPlayer = document.createElement('div');
     newPlayer.classList.add('player-row');
@@ -16,7 +16,7 @@ document.getElementById('add-player').addEventListener('click', function() {
 });
 
 document.getElementById('generate-teams').addEventListener('click', function() {
-    // Récupérer les données des joueurs
+   
     const playerNames = document.querySelectorAll('.player-name');
     const playerNotes = document.querySelectorAll('.player-note');
     const playerPostes = document.querySelectorAll('.player-poste');
@@ -30,7 +30,7 @@ document.getElementById('generate-teams').addEventListener('click', function() {
         });
     }
 
-    // Envoyer les données au backend et générer les équipes
+    
     fetch('/generate-teams', {
         method: 'POST',
         headers: {
@@ -40,12 +40,12 @@ document.getElementById('generate-teams').addEventListener('click', function() {
     })
     .then(response => response.json())
     .then(data => {
-        // Afficher les résultats
+       
         document.getElementById('result-section').style.display = 'block';
         const team1Result = document.getElementById('team1-result');
         const team2Result = document.getElementById('team2-result');
 
-        // Mise à jour pour ajouter une boîte autour des joueurs
+        
         team1Result.innerHTML = `<h3>Équipe 1</h3>
             <div class="players-box">` + data.team1.map(p => `<p>${p.nom}</p>`).join('') + `</div>
             <h4>Note totale : ${data.score1}</h4>`;
