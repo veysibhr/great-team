@@ -32,10 +32,10 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Animation de transition douce pour la couleur */
+    transition: background-color 0.3s ease; 
 }
 button:hover {
-    background-color: #f1823c; /* Couleur lorsque le bouton est survolé */
+    background-color: #f1823c; 
 }
 
 .result-section {
@@ -45,32 +45,32 @@ button:hover {
 }
 
 .team-result {
-    text-align: center; /* Centrer le texte horizontalement */
+    text-align: center; 
     width: 200px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrer horizontalement */
+    align-items: center; 
 }
 .team-result h3, .team-result h4 {
-    margin: 10px 0; /* Ajouter de l'espace autour des titres */
+    margin: 10px 0; 
     text-align: center;
 }
 .team-result .players-box {
-    border: 2px solid black; /* Bordure noire de 2px */
+    border: 2px solid black; 
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     background-color: #f9f9f9;
-    width: 100%; /* S'assure que la boîte prend toute la largeur disponible */
+    width: 100%; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrer horizontalement les joueurs */
-    justify-content: center; /* Centrer verticalement les joueurs */
-    min-height: 100px; /* Hauteur minimale pour garantir un cadre visible
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100px; 
 }
 .players-box p {
-    margin: 5px 0; /* Espacement entre les noms des joueurs */
+    margin: 5px 0; 
 }
 
 .vs {
@@ -80,21 +80,21 @@ button:hover {
     align-self: center;
 }
 .vs-image {
-    width: 185px;  /* Ajuste la largeur selon tes besoins */
-    height: auto;  /* Garde le ratio de l'image */
-    margin: 0 20px;  /* Ajoute de l'espace autour de l'image */
+    width: 185px;  
+    height: auto;  
+    margin: 0 20px; 
 }
 .subtitle {
-    font-size: 0.8rem;  /* Taille plus petite */
-    color: gray;        /* Couleur gris clair (tu peux changer si tu veux) */
-    font-style: italic; /* Italique pour le texte */
-    margin-top: -10px;  /* Ajustement de l'espacement au-dessus */
+    font-size: 0.8rem;  
+    color: gray;        
+    font-style: italic; 
+    margin-top: -10px;  
 }
 .signature {
-    position: fixed; /* Fixe le texte en bas à gauche */
-    bottom: 10px; /* Position à 10px du bas */
-    left: 10px; /* Position à 10px du bord gauche */
-    font-size: 0.8rem; /* Taille de texte plus petite */
-    color: gray; /* Couleur grise pour une signature discrète */
-    font-style: italic; /* Italique pour un effet de signature */
+    position: fixed; 
+    bottom: 10px; 
+    left: 10px;
+    font-size: 0.8rem; 
+    color: gray; 
+    font-style: italic; 
 }
