@@ -15,15 +15,15 @@ def generate_teams():
 
 
 def create_teams(players):
-    # Trier les joueurs par poste
+    
     defenseurs = sorted([p for p in players if p['poste'] == 'defenseur'], key=lambda x: x['note'], reverse=True)
     milieux = sorted([p for p in players if p['poste'] == 'milieu'], key=lambda x: x['note'], reverse=True)
     attaquants = sorted([p for p in players if p['poste'] == 'attaquant'], key=lambda x: x['note'], reverse=True)
 
-    # Initialiser les équipes
+    
     team1, team2 = [], []
 
-    # Fonction pour répartir les joueurs de manière équilibrée par poste et par note
+    
     def distribute_players(poste_joueurs):
         for i, joueur in enumerate(poste_joueurs):
             if len(team1) <= len(team2):
@@ -31,16 +31,16 @@ def create_teams(players):
             else:
                 team2.append(joueur)
 
-    # Répartir les défenseurs, milieux et attaquants
+    
     distribute_players(defenseurs)
     distribute_players(milieux)
     distribute_players(attaquants)
 
-    # Calculer les scores des équipes
+   
     score_team1 = sum([p['note'] for p in team1])
     score_team2 = sum([p['note'] for p in team2])
 
-    # Rééquilibrer les équipes si la différence de score dépasse 10 %
+    
     if abs(score_team1 - score_team2) / max(score_team1, score_team2) > 0.1:
         def swap_players():
             nonlocal score_team1, score_team2
