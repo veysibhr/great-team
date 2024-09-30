@@ -45,11 +45,9 @@ def create_teams(players):
         def swap_players():
             nonlocal score_team1, score_team2
             for i in range(min(len(team1), len(team2))):
-                # Échanger un joueur entre les deux équipes pour rééquilibrer
                 team1[i], team2[i] = team2[i], team1[i]
                 score_team1 = sum([p['note'] for p in team1])
                 score_team2 = sum([p['note'] for p in team2])
-                # Si la différence est maintenant acceptable, on arrête
                 if abs(score_team1 - score_team2) / max(score_team1, score_team2) <= 0.1:
                     break
 
